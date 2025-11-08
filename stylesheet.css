@@ -1,18 +1,42 @@
 body {
-	/*background-color: #FFDAB9;	*/
 	background-color: #000;
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
+	background-image: none;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-transition: background-color linear 5s, background-image linear 2s;
+	-moz-transition: background-color linear 5s, background-image linear 2s;
+	-o-transition: background-color linear 5s, background-image linear 2s;
+	-ms-transition: background-color linear 5s, background-image linear 2s;
+	transition: background-color linear 5s, background-image linear 2s;
 	overflow-x:hidden;
+	min-height: 100vh;
 }
 .container {
 	display: none;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container .row {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.col-md-12, .col-md-2, .col-xs-2 {
+	margin-left: auto;
+	margin-right: auto;
 }
 .peach {
-	background-color: #FFDAB9;
+	background-color: #F4C2C2;
 	
 }
 .peach-after {
@@ -25,90 +49,90 @@ body {
 
 @-webkit-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #FFDBE5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #FFE5EE;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 }
 @-moz-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #FFDBE5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #FFE5EE;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 }
 
 @-o-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #FFDBE5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #FFE5EE;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 }
 
 @-ms-keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #FFDBE5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #FFE5EE;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 }
 
 @keyframes peach_alive {
 	0%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	25%{
-		background-color: #FFE4B5;
+		background-color: #FFDBE5;
 	}
 	50%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 	75%{
-		background-color: #FFEFD5;
+		background-color: #FFE5EE;
 	}
 	100%{
-		background-color: #FFDAB9;
+		background-color: #F4C2C2;
 	}
 }
 
@@ -124,6 +148,7 @@ body {
 
 .bulb-holder {
 	height: 70px;
+	text-align: center;
 }
 
 .bulb-glow-yellow {
@@ -966,6 +991,8 @@ body {
 }
 audio {
 	display: none;
+	position: relative;
+	z-index: 5;
 }
 
 .bannar {
@@ -975,7 +1002,8 @@ audio {
 	-o-transform:translate(0px,-500px);
 	-ms-transform:translate(0px,-500px);
 	transform:translate(0px,-500px);
-
+	display: block;
+	margin: 0 auto;
 }
 .bannar-come {
 	-webkit-animation: bannar_come linear 6s;
@@ -1056,7 +1084,7 @@ audio {
 	100% {
 		-ms-transform:translate(0px,0px);
 	}
-}o
+}
 @keyframes bannar_come {
 	0%{
 		transform:translate(0px,-1000px);
@@ -1085,6 +1113,14 @@ audio {
 	background-repeat: no-repeat no-repeat;
 	background-size: 100px 183px;
 }
+
+/* Better spacing between balloons */
+#b1 { left: calc(50% - 300px); }
+#b2 { left: calc(50% - 180px); }
+#b3 { left: calc(50% - 60px); }
+#b4 { left: calc(50% + 60px); }
+#b5 { left: calc(50% + 180px); }
+#b6 { left: calc(50% + 300px); }
 .balloons h2 {
 	text-transform: uppercase;
 	font-family: 'Signika', sans-serif;
@@ -1260,16 +1296,58 @@ audio {
 	bottom: 0;
 	padding:10px 0px 10px 0px;
 }
+
+.navbar-fixed-bottom {
+	bottom: 30px;
+	position: fixed;
+	width: 100%;
+	background: transparent;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.navbar-fixed-bottom .row {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.navbar-fixed-bottom .col-md-12 {
+	float: none;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+}
 #play, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
 	display: none;
 }
 
 .cake-cover {
 	margin-top: 50px;
+	position: relative;
+	text-align: center;
+	min-height: 350px;
+}
+
+.cake {
+	position: relative !important;
+	display: none;
+	margin: 50px auto 0 auto !important;
+	left: 0 !important;
+	margin-left: 0 !important;
+	width: 300px !important;
+	height: 300px !important;
+	top: 0 !important;
 }
 .message {
 	margin-top: 200px;
 	display: none;
+	text-align: center;
 }
 .message p {
 	font-family: 'Signika', sans-serif;
@@ -1279,32 +1357,327 @@ audio {
 	text-shadow: 2px 2px 2px #FFF;
 	display: none;
 	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
 }
 
+/* Modern Button Styling from Uiverse.io */
+button,
 .btn-primary {
-        border-color: #466baf;
-        padding: 10px;
-        text-transform: uppercase;
-        font-family: 'Signika', sans-serif;
-        font-weight: 700;
-        color: #fff;
-        background-color: #466baf;
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	padding: 0.7em 2em;
+	border: 3px solid #FF0072;
+	border-radius: 2px;
+	position: relative;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+	color: #FF0072;
+	background-color: rgba(244, 194, 194, 0.95);
+	text-decoration: none;
+	transition: 0.3s ease all;
+	font-family: 'Signika', sans-serif;
+	margin: 5px;
+	vertical-align: middle;
 }
-    .btn-primary:hover,
-    .btn-primary:focus,
-    .btn-primary:active,
-    .btn-primary.active,
-    .open .dropdown-toggle.btn-primary {
-        border-color: #fff;
-        color: #fff;
-        background-color: #466baf;
-    }
+
+button:before,
+.btn-primary:before {
+	transition: 0.5s all ease;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	content: '';
+	background-color: #F4C2C2;
+	z-index: -1;
+}
+
+button:hover,
+button:focus,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+	color: white;
+	border-color: #FF0072;
+	background-color: transparent;
+}
+
+button:hover:before,
+button:focus:before,
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before,
+.btn-primary.active:before,
+.open .dropdown-toggle.btn-primary:before {
+	transition: 0.5s all ease;
+	left: 0;
+	right: 0;
+	opacity: 1;
+}
+
+button:active,
+.btn-primary:active {
+	transform: scale(0.9);
+}
 
 
 
-    /*controlling tablet width*/
-    /*@media only screen and (max-width: 720px){
-    	.container {
-    		-webkit-transform: scale(0.9);
-    	}
-    }*/
+/* Responsive Design for Different Screen Sizes */
+
+/* Tablets and smaller desktops (max-width: 992px) */
+@media only screen and (max-width: 992px) {
+	.container {
+		padding: 0 15px;
+	}
+	
+	button,
+	.btn-primary {
+		font-size: 14px;
+		padding: 0.5em 1.2em;
+		margin: 4px;
+	}
+	
+	.message p {
+		font-size: 24px;
+		padding: 0 20px;
+	}
+	
+	.bannar {
+		max-width: 90%;
+	}
+	
+	.balloons {
+		width: 80px;
+		height: 146px;
+		background-size: 80px 146px;
+	}
+	
+	/* Adjusted balloon spacing for tablets */
+	#b1 { left: calc(50% - 240px); }
+	#b2 { left: calc(50% - 144px); }
+	#b3 { left: calc(50% - 48px); }
+	#b4 { left: calc(50% + 48px); }
+	#b5 { left: calc(50% + 144px); }
+	#b6 { left: calc(50% + 240px); }
+	
+	.balloons h2 {
+		font-size: 40px;
+	}
+	
+	.navbar-fixed-bottom .col-md-12 {
+		padding: 0 10px;
+	}
+}
+
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+	.container {
+		padding: 0 10px;
+	}
+	
+	button,
+	.btn-primary {
+		font-size: 12px;
+		padding: 0.4em 0.8em;
+		margin: 3px;
+		letter-spacing: 0.5px;
+		display: inline-block;
+		width: auto;
+	}
+	
+	.navbar-fixed-bottom {
+		bottom: 20px;
+		padding: 0 10px;
+	}
+	
+	.navbar-fixed-bottom .col-md-12 {
+		padding: 0 5px;
+		width: 100%;
+	}
+	
+	.message p {
+		font-size: 18px;
+		padding: 0 15px;
+	}
+	
+	.bannar {
+		max-width: 85%;
+	}
+	
+	.balloons {
+		width: 55px;
+		height: 100px;
+		background-size: 55px 100px;
+	}
+	
+	/* Tighter balloon spacing for mobile */
+	#b1 { left: calc(50% - 140px); }
+	#b2 { left: calc(50% - 85px); }
+	#b3 { left: calc(50% - 28px); }
+	#b4 { left: calc(50% + 28px); }
+	#b5 { left: calc(50% + 85px); }
+	#b6 { left: calc(50% + 140px); }
+	
+	.balloons h2 {
+		font-size: 26px;
+		line-height: 1;
+	}
+	
+	.bulb {
+		width: 40px;
+		height: 40px;
+		background-size: 40px 40px;
+	}
+	
+	.cake-cover {
+		margin-top: 30px;
+		min-height: 280px;
+	}
+	
+	.cake {
+		transform: scale(0.75);
+	}
+	
+	.message {
+		margin-top: 120px;
+	}
+}
+
+/* Small mobile devices (max-width: 576px) */
+@media only screen and (max-width: 576px) {
+	.container {
+		padding: 0 5px;
+	}
+	
+	button,
+	.btn-primary {
+		font-size: 10px;
+		padding: 0.35em 0.6em;
+		margin: 2px;
+		letter-spacing: 0.3px;
+		border: 2px solid #FF0072;
+		display: inline-block;
+		width: auto;
+	}
+	
+	.navbar-fixed-bottom {
+		bottom: 10px;
+		padding: 0 5px;
+	}
+	
+	.navbar-fixed-bottom .col-md-12 {
+		padding: 0;
+		width: 100%;
+	}
+	
+	.message p {
+		font-size: 14px;
+		padding: 0 10px;
+	}
+	
+	.bannar {
+		max-width: 80%;
+	}
+	
+	.balloons {
+		width: 45px;
+		height: 82px;
+		background-size: 45px 82px;
+	}
+	
+	/* Much tighter balloon spacing for small mobile */
+	#b1 { right: calc(50% + 110px); }
+	#b2 { right: calc(50% + 66px); }
+	#b3 { right: calc(50% + 22px); }
+	#b4 { left: calc(50% + 22px); }
+	#b5 { left: calc(50% + 66px); }
+	#b6 { left: calc(50% + 110px); }
+	
+	.balloons h2 {
+		font-size: 20px;
+		line-height: 1;
+	}
+	
+	.bulb {
+		width: 30px;
+		height: 30px;
+		background-size: 30px 30px;
+	}
+	
+	.bulb-holder {
+		height: 50px;
+	}
+	
+	.cake-cover {
+		margin-top: 15px;
+		min-height: 200px;
+	}
+	
+	.cake {
+		transform: scale(0.55);
+	}
+	
+	.message {
+		margin-top: 80px;
+	}
+}
+
+/* Extra small devices (max-width: 400px) */
+@media only screen and (max-width: 400px) {
+	.container {
+		padding: 0;
+	}
+	
+	button,
+	.btn-primary {
+		font-size: 8px;
+		padding: 0.3em 0.5em;
+		margin: 2px;
+		display: inline-block;
+		width: auto;
+	}
+	
+	.navbar-fixed-bottom {
+		padding: 0;
+	}
+	
+	.message p {
+		font-size: 12px;
+		padding: 0 5px;
+	}
+	
+	.balloons {
+		width: 35px;
+		height: 64px;
+		background-size: 35px 64px;
+	}
+	
+	/* Very tight balloon spacing for extra small screens */
+	#b1 { left: calc(50% - 90px); }
+	#b2 { left: calc(50% - 54px); }
+	#b3 { left: calc(50% - 18px); }
+	#b4 { left: calc(50% + 18px); }
+	#b5 { left: calc(50% + 54px); }
+	#b6 { left: calc(50% + 90px); }
+	
+	.balloons h2 {
+		font-size: 16px;
+		line-height: 1;
+	}
+	
+	.cake-cover {
+		min-height: 180px;
+	}
+	
+	.cake {
+		transform: scale(0.45);
+	}
+}
