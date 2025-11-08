@@ -1334,15 +1334,10 @@ audio {
 	min-height: 350px;
 }
 
+/* Override cake.less positioning to center properly */
 .cake {
-	position: relative !important;
 	display: none;
-	margin: 50px auto 0 auto !important;
-	left: 0 !important;
-	margin-left: 0 !important;
-	width: 300px !important;
-	height: 300px !important;
-	top: 0 !important;
+	top: 30% !important;
 }
 .message {
 	margin-top: 200px;
